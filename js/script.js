@@ -1,14 +1,6 @@
-/* =========================================================
-   Student Portfolio - script.js
-   1. Mobile menu   2. Projects from JSON   3. GitHub API
-   4. Contact form validation   5. Back to top button
-   ========================================================= */
 
-// >>> CHANGE THIS to your real GitHub username <<<
 const GITHUB_USERNAME = "nathanielantonino-dev";
 
-
-/* ---------- 1. Mobile menu ---------- */
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 
@@ -28,7 +20,6 @@ navMenu.querySelectorAll("a").forEach(function (link) {
 });
 
 
-/* ---------- 2. Load projects from data/projects.json ---------- */
 const projectsGrid = document.getElementById("projectsGrid");
 
 async function loadProjects() {
@@ -37,9 +28,9 @@ async function loadProjects() {
     if (!response.ok) {
       throw new Error("HTTP status " + response.status);
     }
-    const projects = await response.json();   // parse the JSON
+    const projects = await response.json();   
 
-    projectsGrid.innerHTML = "";               // remove "Loading..." text
+    projectsGrid.innerHTML = "";             
     projects.forEach(function (project) {
       projectsGrid.appendChild(createProjectCard(project));
     });
@@ -50,7 +41,6 @@ async function loadProjects() {
   }
 }
 
-// Build one project card (textContent is used so data is never run as HTML)
 function createProjectCard(project) {
   const card = document.createElement("article");
   card.className = "card project-card";
@@ -94,15 +84,14 @@ function createProjectCard(project) {
 }
 
 
-/* ---------- 3. Latest GitHub repositories (REST API) ---------- */
 const repoList = document.getElementById("repoList");
 
 async function loadRepos() {
   const unavailable =
     '<li class="status-message error">GitHub repositories are currently unavailable. Please try again later.</li>';
 
-  // Skip the request until a real username is set (avoids a 404 error)
-  if (GITHUB_USERNAME === "nathanielantonino-dev") {
+
+  if (GITHUB_USERNAME === "YOUR-GITHUB-USERNAME") {
     repoList.innerHTML =
       '<li class="status-message">Set your GitHub username in js/script.js to show your latest repositories.</li>';
     return;
@@ -146,14 +135,13 @@ async function loadRepos() {
 }
 
 
-/* ---------- 4. Contact form validation ---------- */
 const form = document.getElementById("contactForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 const formSuccess = document.getElementById("formSuccess");
 
-// Simple email pattern: text@text.text
+
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function showError(input, errorId, message) {
@@ -163,7 +151,7 @@ function showError(input, errorId, message) {
 }
 
 form.addEventListener("submit", function (event) {
-  event.preventDefault();                 // never submit to a server
+  event.preventDefault();                 
   formSuccess.textContent = "";
 
   let valid = true;
@@ -193,20 +181,19 @@ form.addEventListener("submit", function (event) {
   }
 
   if (!valid) {
-    return;                               // stop here if something is wrong
+    return;                               
   }
 
-  // Static site: the message is NOT really sent, we only simulate success
+
   formSuccess.textContent = "Thank you! Your message has been received.";
   form.reset();
 });
 
 
-/* ---------- 5. Back to top button (personal feature) ---------- */
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", function () {
-  // Show after scrolling 300px, hide near the top
+
   backToTop.classList.toggle("visible", window.scrollY > 300);
 });
 
@@ -215,6 +202,5 @@ backToTop.addEventListener("click", function () {
 });
 
 
-/* ---------- Start ---------- */
 loadProjects();
 loadRepos();
