@@ -1,26 +1,18 @@
 [
   {
-    "title": "Student Registration System",
-    "description": "A simple application for managing student records: add, view, update and delete entries stored in a database. (Replace with your own description.)",
-    "technologies": ["Java", "MySQL"],
+    "title": "First Personal Webpage",
+    "description": "My first personal webpage",
+    "technologies": ["CSS", "HTML"],
     "role": "Developer",
     "screenshot": "images/project1.jpg",
-    "link": "https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-1"
+    "link": "https://nathanielantonino-dev.github.io/AntoninoWebpage/"
   },
   {
-    "title": "Personal Website",
-    "description": "A responsive website built with plain HTML, CSS and JavaScript. (Replace with your own description.)",
-    "technologies": ["HTML", "CSS", "JavaScript"],
+    "title": "Simple Login Page",
+    "description": "My first simple Login Page",
+    "technologies": ["HTML", "CSS"],
     "role": "Designer and developer",
     "screenshot": "images/project2.jpg",
-    "link": "https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-2"
-  },
-  {
-    "title": "Grade Calculator",
-    "description": "A small tool that calculates a student's average from entered grades. (Replace with your own description.)",
-    "technologies": ["JavaScript", "HTML"],
-    "role": "Developer",
-    "screenshot": "images/project3.jpg",
-    "link": "https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPOSITORY-3"
+    "link": "https://nathanielantonino-dev.github.io/loginpage/"
   }
 ]
