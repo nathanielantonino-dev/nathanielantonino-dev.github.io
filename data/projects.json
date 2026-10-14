@@ -4,7 +4,7 @@
     "description": "My first personal webpage",
     "technologies": ["CSS", "HTML"],
     "role": "Developer",
-    "screenshot": "images/project1.png",
+    "screenshot": "images/project2.png",
     "link": "https://nathanielantonino-dev.github.io/AntoninoWebpage/"
   },
   {
@@ -12,7 +12,7 @@
     "description": "My first simple Login Page",
     "technologies": ["HTML", "CSS"],
     "role": "Designer and developer",
-    "screenshot": "images/project2.png",
+    "screenshot": "images/project1.png",
     "link": "https://nathanielantonino-dev.github.io/loginpage/"
   }
 ]
