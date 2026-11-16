@@ -15,4 +15,13 @@
     "screenshot": "images/project02.png",
     "link": "https://nathanielantonino-dev.github.io/loginpage/"
   }
+
+    {
+    "title": "Laundry Track",
+    "description": "Laundry Tracker",
+    "technologies": ["HTML", "CSS", "JAVASCRIPT"],
+    "role": "Track Clothes loads, Drop-off and Pickup clothes",
+    "screenshot": "images/project3.png",
+    "link": "https://nathanielantonino-dev.github.io/Laundry-Tracker/"
+  }
 ]
